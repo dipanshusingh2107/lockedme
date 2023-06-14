@@ -3,6 +3,7 @@ package com.lockedme;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 
 
 public class FileSystem {
@@ -26,7 +27,11 @@ public class FileSystem {
 	
 	public static String[] getFiles() {
 		File folder = new File(root);
-		return folder.list();		
+		String[] files = folder.list();
+		
+		
+		Arrays.sort(files);
+		return files;		
 	}
 	
 	public static void deleteFile(String fileName) throws FileNotFoundException {
