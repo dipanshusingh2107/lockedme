@@ -38,7 +38,7 @@ public class FileSystem {
 		File file = new File(root+fileName);
 		
 		if(file.exists() == false)
-			throw new FileNotFoundException();
+			throw new FileNotFoundException("File not found");
 		
 		file.delete();
 	}
