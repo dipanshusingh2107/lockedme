@@ -29,8 +29,13 @@ public class MoreMenu {
 				fileName = fileName.toLowerCase();
 				
 				try {
-					FileSystem.createFile(fileName);
-					System.out.println("File Created");
+					boolean result = FileSystem.createFile(fileName);
+					
+					if(result == true)
+						System.out.println("File Created");
+					else
+						System.out.println("File Already Exists");
+					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					System.out.println(e.getMessage());
