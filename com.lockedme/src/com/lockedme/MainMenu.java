@@ -27,19 +27,26 @@ public class MainMenu {
 				continue;
 			}
 			
-			if(option == 1) {
+			
+			try {
 				
-				Output.displayGetFiles(FileSystem.getFiles()); 
-				
-			}else if(option == 2) {
-				
-				MoreMenu.main(null);
-				
-			} else if(option == 3) {
-				
-				System.out.println("Exiting..... Bye");
-				break;
+				if(option == 1) {
+					
+					Output.displayGetFiles(FileSystem.getFiles()); 
+					
+				}else if(option == 2) {
+					
+					MoreMenu.main(null);
+					
+				} else if(option == 3) {
+					
+					System.out.println("Exiting..... Bye");
+					break;
+				}
+			} catch(Exception e) {
+				System.out.println(e.getMessage());
 			}
+			
 					
 		}
 

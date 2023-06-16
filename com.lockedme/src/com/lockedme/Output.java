@@ -4,7 +4,7 @@ public class Output {
 
 	static public void displayMainMenu() {
 		System.out.println("1. Show Files");
-		System.out.println("2 . More Operation");
+		System.out.println("2. More Operation");
 		System.out.println("3. Exit");
 	}
 	

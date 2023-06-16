@@ -3,13 +3,14 @@ package com.lockedme;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Arrays;
 
 
 public class FileSystem {
 	
-	private static String root = "/Users/sushantkumar/Desktop/lockedme/";
-	
+	private static String root = System.getProperty("user.dir")+'/';
+		
 	public void setRoot(String path) {
 		File rootPath = new File(path);
 		
